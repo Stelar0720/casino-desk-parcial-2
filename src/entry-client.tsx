@@ -4,7 +4,7 @@ import { RouterProvider } from "@tanstack/react-router";
 import { router } from "./router";
 import "./styles/global.css";
 
-import { ClerkProvider } from "@clerk/tanstack-start";
+import { ClerkProvider } from "@clerk/clerk-react";
 
 // Configurar Clerk con variables de entorno
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || "pk_test_placeholder";
