@@ -1,0 +1,18 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: apps/backend/CasinoDesk.Api/Dockerfile
+    container_name: casinodesk-backend
+    ports:
+      - "5067:5067"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: apps/frontend/Dockerfile
+    container_name: casinodesk-frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
